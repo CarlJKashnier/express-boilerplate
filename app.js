@@ -11,7 +11,7 @@ var MongoStore = require('connect-mongostore')(session);
 var helmet = require('helmet');
 //Change
 //Connect to Database
-//### mongoose.connect(process.env.MLab_URI);
+mongoose.connect(process.env.MLAB_URI);
 app.use(helmet());
 //Dev logging
 app.use(morgan('dev'));
@@ -23,9 +23,9 @@ app.use(session ({
     cookie: {
       maxAge: 691200000,
     },
-// ###    store: new MongoStore({
-// ###      mongooseConnection: mongoose.connection
-// ###    }),
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection
+    }),
     secret: 'Shhh, its the secret',
     saveUninitialized: true,
     resave: true
