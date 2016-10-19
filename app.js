@@ -23,7 +23,7 @@ app.use(session ({
     cookie: {
       maxAge: 691200000,
     },
-// ###    store: new NmongoStore({
+// ###    store: new MongoStore({
 // ###      mongooseConnection: mongoose.connection
 // ###    }),
     secret: 'Shhh, its the secret',

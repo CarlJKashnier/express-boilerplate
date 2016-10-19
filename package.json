@@ -39,7 +39,8 @@
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "jasmine-node spec",
+    "start": "node app.js"
   },
   "keywords": [
     "express",
